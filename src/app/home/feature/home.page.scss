@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400);
 
+$border-color-red: transparent transparent #ff0000;
+$border-color-green: transparent transparent #1eff00;
+$border-color-white: transparent transparent #eaeaea;
+$fadein-backwards: fadeIn 1s 1 backwards;
+$fadeIn-forwards: fadeIn 1s 1s 1 forwards;
+
 * {
   overflow: hidden;
 }
@@ -19,7 +25,7 @@ a, p, input {
   left: 50%;
   padding-top: 10vh;
   transform: translateX(-50%) translateY(-50%);
-  animation: fadeIn 1s 1 backwards;
+  animation: $fadein-backwards;
 
   &.inactive {
     display: none;
@@ -31,7 +37,7 @@ a, p, input {
     margin-bottom: 1em;
     background-color: transparent;
     border-style: solid;
-    border-color: transparent transparent #eaeaea;
+    border-color: $border-color-white;
     border-width: 4px 0 4px 0;
     padding: 0.5em 0;
     font-size: 1em;
@@ -42,11 +48,11 @@ a, p, input {
     }
 
     &:invalid:not(:placeholder-shown) {
-      border-color: transparent transparent #ff0000;
+      border-color: $border-color-red;
     }
 
     &:valid {
-      border-color: transparent transparent #1eff00;
+      border-color: $border-color-green;
     }
   }
 
@@ -91,7 +97,7 @@ a, p, input {
   left: 50%;
   padding-top: 10vh;
   transform: translateX(-50%) translateY(-50%);
-  animation: fadeIn 1s 1 backwards;
+  animation: $fadein-backwards;
 
   &.inactive {
     display: none;
@@ -103,23 +109,23 @@ a, p, input {
     margin-bottom: 1em;
     background-color: transparent;
     border-style: solid;
-    border-color: transparent transparent #eaeaea;
+    border-color: $border-color-white;
     border-width: 4px 0 4px 0;
     padding: 0.5em 0;
     font-size: 1em;
     box-sizing: border-box;
-    animation: fadeIn 1s 1s 1 forwards;
+    animation: $fadeIn-forwards;
 
     &:focus {
       outline: none;
     }
 
     &:invalid:not(:placeholder-shown) {
-      border-color: transparent transparent #ff0000;
+      border-color: $border-color-red;
     }
 
     &:valid {
-      border-color: transparent transparent #1eff00;
+      border-color: $border-color-green;
     }
   }
 
@@ -148,7 +154,7 @@ a, p, input {
   left: 50%;
   padding-top: 10vh;
   transform: translateX(-50%) translateY(-50%);
-  animation: fadeIn 1s 1 backwards;
+  animation: $fadein-backwards;
 
   &.inactive {
     display: none;
@@ -160,23 +166,23 @@ a, p, input {
     margin-bottom: 1em;
     background-color: transparent;
     border-style: solid;
-    border-color: transparent transparent #eaeaea;
+    border-color: $border-color-white;
     border-width: 4px 0 4px 0;
     padding: 0.5em 0;
     font-size: 1em;
     box-sizing: border-box;
-    animation: fadeIn 1s 1s 1 forwards;
+    animation: $fadeIn-forwards;
 
     &:focus {
       outline: none;
     }
 
     &:invalid:not(:placeholder-shown) {
-      border-color: transparent transparent #ff0000;
+      border-color: $border-color-red;
     }
 
     &:valid {
-      border-color: transparent transparent #1eff00;
+      border-color: $border-color-green;
     }
   }
 
