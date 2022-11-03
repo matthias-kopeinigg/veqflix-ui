@@ -28,7 +28,7 @@
    <div class="sing-up-wrapper fadeIn-slow">
      <p>Not registered?  <a class="btn btn-sign-up" (click)="updateActiveViewWithForm(activeViews.SIGN_UP, signInForm)">Create an account</a></p>
    </div>
-   <a class="btn btn-forgott-password fadeIn-slow" (click)="updateActiveViewWithForm(activeViews.FORGOT_PASSWORD, signInForm)">Forgott your Password?</a>
+   <a class="btn btn-forgot-password fadeIn-slow" (click)="updateActiveViewWithForm(activeViews.FORGOT_PASSWORD, signInForm)">Forgot your Password?</a>
 
 </div>
 
@@ -72,11 +72,11 @@
 
 </div>
 
-<!-- Forgott Password view -->
-<div class="forgott-password-wrapper" [ngClass]="activeView === activeViews.FORGOT_PASSWORD ? '!inactive' : 'inactive'">
+<!-- Forgot Password view -->
+<div class="forgot-password-wrapper" [ngClass]="activeView === activeViews.FORGOT_PASSWORD ? '!inactive' : 'inactive'">
 
   <!-- Form -->
-  <form class="form form-forgott-password fadeIn-fast" #forgottPasswordForm="ngForm">
+  <form class="form form-forgot-password fadeIn-fast" #forgotPasswordForm="ngForm">
     <input
       type="email"
       [(ngModel)]="email"
