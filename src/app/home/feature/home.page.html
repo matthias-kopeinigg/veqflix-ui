@@ -44,5 +44,19 @@
 
 <!-- Background -->
 <div class="background-wrapper">
+  <!-- Sign in button -->
+  <a class="btn btn-sign-in" (click)="updateActiveView(activeViews.SIGN_IN)" [ngClass]="activeView === activeViews.LANDING ? '!inactive' : 'inactive'">Sign In</a>
 
+  <!-- Background image -->
+  <div class="background-image-wrapper">
+    <img class="background-image" src="../../../assets/img/veqflix.png" [ngClass]="activeView === activeViews.LANDING ? '!inactive' : 'inactive'">
+  </div>
+
+   <!--
+    Background video
+    NOTE: The image is hardcoded till a backend is able to provide trailers to this frontend
+  -->
+  <video class="background-video-wrapper" loop="true" autoplay="true" [volume]="0">
+    <source class="background-video" src="../../../assets/video/Hellraiser _ Official Trailer _ Hulu.mp4" type="video/mp4"/>
+  </video>
 </div>
