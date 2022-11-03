@@ -24,10 +24,181 @@ a, p, input {
   &.inactive {
     display: none;
   }
+
+  input {
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+    background-color: transparent;
+    border-style: solid;
+    border-color: transparent transparent #eaeaea;
+    border-width: 4px 0 4px 0;
+    padding: 0.5em 0;
+    font-size: 1em;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      border-color: transparent transparent #ff0000;
+    }
+
+    &:valid {
+      border-color: transparent transparent #1eff00;
+    }
+  }
+
+  .btn-sing-in {
+    display: block;
+    float: right;
+  }
+
+  .btn-cancel {
+    display: block;
+    float: left;
+  }
+
+  .btn-forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 10%;
+    font-size: 80%;
+  }
+
+  .sing-up-wrapper {
+    display: block;
+    text-align: center;
+    margin-top: 20%;
+    font-size: 90%;
+
+    p {
+      margin: 15px 0 0;
+
+      .btn-sign-up {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
-/* Background styles */
-.background-wrapper {
+/* Sign up view */
+.sign-up-wrapper {
+  position: absolute;
+  z-index: 3;
+  top: 60%;
+  left: 50%;
+  padding-top: 10vh;
+  transform: translateX(-50%) translateY(-50%);
+  animation: fadeIn 1s 1 backwards;
+
+  &.inactive {
+    display: none;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+    background-color: transparent;
+    border-style: solid;
+    border-color: transparent transparent #eaeaea;
+    border-width: 4px 0 4px 0;
+    padding: 0.5em 0;
+    font-size: 1em;
+    box-sizing: border-box;
+    animation: fadeIn 1s 1s 1 forwards;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      border-color: transparent transparent #ff0000;
+    }
+
+    &:valid {
+      border-color: transparent transparent #1eff00;
+    }
+  }
+
+  .btn-sing-up {
+    display: block;
+    float: right;
+  }
+
+  .btn-cancel {
+    display: block;
+    float: left;
+  }
+
+  .btn-sign-in {
+    display: block;
+    text-align: center;
+    margin-top: 40%;
+  }
+}
+
+/* Forgot password view */
+.forgot-password-wrapper {
+  position: absolute;
+  z-index: 3;
+  top: 60%;
+  left: 50%;
+  padding-top: 10vh;
+  transform: translateX(-50%) translateY(-50%);
+  animation: fadeIn 1s 1 backwards;
+
+  &.inactive {
+    display: none;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+    background-color: transparent;
+    border-style: solid;
+    border-color: transparent transparent #eaeaea;
+    border-width: 4px 0 4px 0;
+    padding: 0.5em 0;
+    font-size: 1em;
+    box-sizing: border-box;
+    animation: fadeIn 1s 1s 1 forwards;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      border-color: transparent transparent #ff0000;
+    }
+
+    &:valid {
+      border-color: transparent transparent #1eff00;
+    }
+  }
+
+  .btn-reset-password {
+    display: block;
+    float: right;
+  }
+
+  .btn-cancel {
+    display: block;
+    float: left;
+  }
+
+  .btn-sign-in {
+    display: block;
+    text-align: center;
+    margin-top: 40%;
+  }
+}
+
+ /* Background styles */
+ .background-wrapper {
   position: relative;
   width: 100vw;
   height: 100vh;
