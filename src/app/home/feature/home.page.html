@@ -75,6 +75,23 @@
 <!-- Forgott Password view -->
 <div class="forgott-password-wrapper" [ngClass]="activeView === activeViews.FORGOT_PASSWORD ? '!inactive' : 'inactive'">
 
+  <!-- Form -->
+  <form class="form form-forgott-password fadeIn-fast" #forgottPasswordForm="ngForm">
+    <input
+      type="email"
+      [(ngModel)]="email"
+      id="email"
+      name="email"
+      placeholder="Email"
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+      required>
+  </form>
+
+  <!-- Buttons -->
+  <a class="btn btn-reset-password fadeIn-fast">Reset password</a>
+  <a class="btn btn-cancel fadeIn-fast" (click)="updateActiveViewWithForm(activeViews.LANDING, singUpForm)">Cancel</a>
+  <a class="btn btn-sign-in fadeIn-slow" (click)="updateActiveViewWithForm(activeViews.FORGOT_PASSWORD, singUpForm)">Sing In</a>
+
 </div>
 
 <!-- Background -->
