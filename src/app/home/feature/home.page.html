@@ -35,6 +35,41 @@
 <!-- Sign up view -->
 <div class="sign-up-wrapper" [ngClass]="activeView === activeViews.SIGN_UP ? '!inactive' : 'inactive'">
 
+  <!-- Form -->
+  <form class="form form-sing-up fadeIn-fast" #singUpForm="ngForm">
+    <input
+      type="text"
+      [(ngModel)]="username"
+      id="username"
+      name="username"
+      placeholder="Username"
+      pattern="^[a-zA-Z0-9](_(?!(\.|_))|\.(?!(_|\.))|[a-zA-Z0-9]){4,25}[a-zA-Z0-9]$"
+      required>
+
+    <input
+      type="email"
+      [(ngModel)]="email"
+      id="email"
+      name="email"
+      placeholder="Email"
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+      required>
+
+    <input
+      type="password"
+      [(ngModel)]="password"
+      id="password"
+      name="password"
+      placeholder="Password"
+      pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+      required>
+  </form>
+
+  <!-- Buttons -->
+  <a class="btn btn-sing-up fadeIn-fast">Sign Up</a>
+  <a class="btn btn-cancel fadeIn-fast" (click)="updateActiveViewWithForm(activeViews.LANDING, singUpForm)">Cancel</a>
+  <a class="btn btn-sign-in fadeIn-slow" (click)="updateActiveViewWithForm(activeViews.SIGN_IN, singUpForm)">Sing In</a>
+
 </div>
 
 <!-- Forgott Password view -->
