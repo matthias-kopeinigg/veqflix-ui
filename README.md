@@ -2,10 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.8.
 
+![](./.img/preview.gif)
+
 ## Introduction
 > The project is intended as demonstration and should be used in production. The project is not yet complete and is still under development.
 
-This project is a simple landing page for a streaming platform like [Netflix](https://www.netflix.com).
+This project is a simple responsive landing page for a streaming platform like [Netflix](https://www.netflix.com).
 
 **Important**
 The design is from [Mike Cheshire](https://codepen.io/mixchex/pen/BjJxpR) recoded and implemented by myself.
